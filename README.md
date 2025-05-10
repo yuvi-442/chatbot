@@ -63,5 +63,36 @@ A simple yet effective command-line-based customer support chatbot built using *
 
 - Upgrade model to transformer-based NLP (e.g., BERT or GPT)
 
+   
+## 📁 Dataset
+
+The sample dataset is hardcoded for simplicity and contains frequently asked support questions with corresponding categories:
+
+```python
+data = {
+    'question': [
+        "How can I reset my password?",
+        "I want to check my order status",
+        "How to return a product?",
+        "Where is my package?",
+        "Do you offer discounts?",
+        "How can I contact support?",
+        "Can I change my shipping address?",
+        "Can I cancel my order?"
+    ],
+    'category': [
+        "Password Reset",
+        "Order Status",
+        "Product Return",
+        "Package Tracking",
+        "Discounts",
+        "Contact Support",
+        "Shipping Address",
+        "Order Cancellation"
+    ]
+}
+
+
+
 
 
