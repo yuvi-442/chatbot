@@ -170,81 +170,81 @@ python chatbot.py
 Once you execute the script, you will see:
 
 
-Hello! I'm your customer support chatbot.
-How can I Help You?
-You: 
+  Hello! I'm your customer support chatbot.
+  How can I Help You?
+  You: 
 Start typing your query, e.g.:
-
+ 
 You: I forgot my password
 Bot: I can help with Password Reset
 Type exit to terminate the chatbot.
 
 🧪 Testing and Accuracy
-The model is evaluated using a simple accuracy score:
+   The model is evaluated using a simple accuracy score:
 
 python code:
 
-model.score(X_test, y_test)
-With 8 examples, the split gives only 1–2 test samples. Accuracy may vary significantly and isn't statistically significant due to the tiny dataset.
+  model.score(X_test, y_test)
+  With 8 examples, the split gives only 1–2 test samples. Accuracy may vary significantly and isn't statistically significant due to the tiny dataset.
 
 Example Output:
 
-Model Accuracy: 100.00%
+  Model Accuracy: 100.00%
 
 📥 Sample Inputs and Outputs
 User Input	Predicted Category
-“Where is my order?”	Package Tracking
-“I want to return this item”	Product Return
-“How do I get in touch?”	Contact Support
-“Do you give any coupon?”	Discounts
-“Cancel the order I made today”	Order Cancellation
+   “Where is my order?”	Package Tracking
+   “I want to return this item”	Product Return
+   “How do I get in touch?”	Contact Support
+   “Do you give any coupon?”	Discounts
+   “Cancel the order I made today”	Order Cancellation
 
 🔧 Improvements and Future Scope
-Expand dataset to hundreds or thousands of diverse queries.
+   Expand dataset to hundreds or thousands of diverse queries.
 
-Add synonyms and paraphrasing to improve intent recognition.
+   Add synonyms and paraphrasing to improve intent recognition.
 
-Integrate Named Entity Recognition (NER) for more personalized responses.
+   Integrate Named Entity Recognition (NER) for more personalized responses.
 
-Move from console to GUI or web-based interface using Flask/Django.
+   Move from console to GUI or web-based interface using Flask/Django.
 
-Incorporate a dialogue history for better context awareness.
+   Incorporate a dialogue history for better context awareness.
 
 Add multilingual support.
 
 Use more advanced models like BERT or GPT for dynamic conversations.
 
 ⚠️ Limitations
-Small dataset results in overfitting and lack of generalization.
+   Small dataset results in overfitting and lack of generalization.
 
-Fails on queries not similar to the trained samples.
+   Fails on queries not similar to the trained samples.
 
-No real-time backend integration or database support.
+   No real-time backend integration or database support.
 
-Only supports hardcoded questions and categories.
+   Only supports hardcoded questions and categories.
 
-Not context-aware; each query is treated independently.
+   Not context-aware; each query is treated independently.
 
 ✅ Conclusion
-This project serves as a foundational prototype of a machine learning-based customer support chatbot using Python and scikit-learn. While limited in scope, it effectively demonstrates the power of natural language processing combined with classic machine learning to classify user queries and simulate a conversational agent. With further development, this system can be scaled into a production-grade smart assistant.
+               This project serves as a foundational prototype of a machine learning-based customer support chatbot using Python and scikit-learn. While limited in scope, it effectively demonstrates the power of natural language processing combined with classic machine learning to classify user queries and simulate a conversational agent. With further development, this system can be scaled into a production-grade smart assistant.
 
 📚 References
-scikit-learn Documentation
+      scikit-learn Documentation
 
-Python Official Docs
+      Python Official Docs
 
-CountVectorizer
+      CountVectorizer
 
-MultinomialNB
+      MultinomialNB
 
-Naive Bayes Text Classification
+      Naive Bayes Text Classification
 
 [Customer Support Bots - IBM, AWS Examples]
 
 Team Members and Roles
-●	Yuvaraj.k: Introduction,Documentation and final report.
-●	Suman.R: Model development and testing.
-●	Saravanan.v: Visualization and deployment.
-●	Pravin kumar.M: Data collection and cleaning.
+  ●	Yuvaraj.k: Introduction,Documentation and final report.
+  ●	Suman.R: Model development and testing.
+  ●	Saravanan.v: Visualization and deployment.
+  ●	Pravin kumar.M: Data collection and cleaning.
 
 
