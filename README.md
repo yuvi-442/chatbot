@@ -105,11 +105,12 @@ pythoncode:
     ]
 }
 df = pd.DataFrame(data)
+
 Dataset stored as a dictionary and converted into a DataFrame.
 
 python code:
 
-X = df['question']
+                                 X = df['question']
 y = df['category']
 X: Input questions.
 
@@ -117,26 +118,24 @@ y: Target labels (categories).
 
 python code:
 
-model = make_pipeline(CountVectorizer(), MultinomialNB())
-Creates a processing pipeline for vectorization and classification.
+                                    model = make_pipeline(CountVectorizer(), MultinomialNB())
 
-python
-Copy
-Edit
-X_train, X_test, y_train, y_test = train_test_split(X, y, test_size=0.2, random_state=42)
-model.fit(X_train, y_train)
-Data is split into training and test sets (80/20) and the model is trained.
+Creates a processing pipeline for vectorization and classification.
 
 python code:
 
-def chatbot_response(query):
+                                     X_train, X_test, y_train, y_test = train_test_split(X, y, test_size=0.2, random_state=42)
+model.fit(X_train, y_train)
+python code:
+
+                          def chatbot_response(query):
     prediction = model.predict([query])
     return prediction[0]
 Predicts category for a user input.
 
 python code:
 
-while True:
+                        while True:
     user_input = input("You: ")
     if user_input.lower() == 'exit':
         print("Goodbye! Have a great day.")
@@ -147,7 +146,7 @@ Runs a loop to simulate an ongoing chatbot interaction.
 
 python code:
 
-       accuracy = model.score(X_test, y_test)
+                        accuracy = model.score(X_test, y_test)
        print(f"Model Accuracy: {accuracy * 100:.2f}%")
        Outputs model performance.
 
