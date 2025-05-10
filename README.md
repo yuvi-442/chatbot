@@ -92,7 +92,7 @@ Libraries for data manipulation, machine learning, and visualization.
  
 pythoncode:
 
-data = {
+                     data = {
     'question': [
         "How can I reset my password?",
         "I want to check my order status",
@@ -104,7 +104,6 @@ data = {
         ...
     ]
 }
-  
 df = pd.DataFrame(data)
 Dataset stored as a dictionary and converted into a DataFrame.
 
@@ -128,14 +127,14 @@ X_train, X_test, y_train, y_test = train_test_split(X, y, test_size=0.2, random_
 model.fit(X_train, y_train)
 Data is split into training and test sets (80/20) and the model is trained.
 
-           python code:
+python code:
 
 def chatbot_response(query):
     prediction = model.predict([query])
     return prediction[0]
 Predicts category for a user input.
 
-           python code:
+python code:
 
 while True:
     user_input = input("You: ")
@@ -146,7 +145,7 @@ while True:
     print(f"Bot: I can help with {response}")
 Runs a loop to simulate an ongoing chatbot interaction.
 
-            python code:
+python code:
 
        accuracy = model.score(X_test, y_test)
        print(f"Model Accuracy: {accuracy * 100:.2f}%")
