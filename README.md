@@ -128,14 +128,14 @@ X_train, X_test, y_train, y_test = train_test_split(X, y, test_size=0.2, random_
 model.fit(X_train, y_train)
 Data is split into training and test sets (80/20) and the model is trained.
 
-python code:
+           python code:
 
 def chatbot_response(query):
     prediction = model.predict([query])
     return prediction[0]
 Predicts category for a user input.
 
-python code:
+           python code:
 
 while True:
     user_input = input("You: ")
@@ -146,11 +146,11 @@ while True:
     print(f"Bot: I can help with {response}")
 Runs a loop to simulate an ongoing chatbot interaction.
 
-python code:
+            python code:
 
-accuracy = model.score(X_test, y_test)
-print(f"Model Accuracy: {accuracy * 100:.2f}%")
-Outputs model performance.
+       accuracy = model.score(X_test, y_test)
+       print(f"Model Accuracy: {accuracy * 100:.2f}%")
+       Outputs model performance.
 
 💻 Installation Guide
 Clone the Repository (if applicable):
@@ -226,18 +226,20 @@ Use more advanced models like BERT or GPT for dynamic conversations.
    Not context-aware; each query is treated independently.
 
 ✅ Conclusion
-               This project serves as a foundational prototype of a machine learning-based customer support chatbot using Python and scikit-learn. While limited in scope, it effectively demonstrates the power of natural language processing combined with classic machine learning to classify user queries and simulate a conversational agent. With further development, this system can be scaled into a production-grade smart assistant.
+                This project serves as a foundational prototype of a machine learning-based customer support chatbot using Python and scikit-learn. While limited in scope, it effectively demonstrates 
+                the power of natural language processing combined with classic machine learning to classify user queries and simulate a conversational agent. With further development, this system can 
+                be scaled into a production-grade smart assistant.
 
 📚 References
-      scikit-learn Documentation
+          scikit-learn Documentation
 
-      Python Official Docs
+          Python Official Docs
 
-      CountVectorizer
+          CountVectorizer
 
-      MultinomialNB
+          MultinomialNB
 
-      Naive Bayes Text Classification
+          Naive Bayes Text Classification
 
 [Customer Support Bots - IBM, AWS Examples]
 
