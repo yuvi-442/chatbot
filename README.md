@@ -1,6 +1,7 @@
-                                                             Revolutionizing customer support with an intelligent chatbot for automated assistance .
+                                                             Revolutionizing customer support with an intelligent chatbot for automated assistance.
 
 📖 Project Overview
+
             This project is a simple customer support chatbot built using Python, leveraging the Multinomial Naive Bayes classification model and the CountVectorizer from scikit-learn. The chatbot takes user queries as input and classifies them into predefined categories such as password reset, order status, or contact support.
 
             The aim is to simulate a lightweight FAQ chatbot that can assist users with their questions in real time using basic natural language processing and supervised machine learning.
@@ -28,71 +29,69 @@ Programming Language: Python 3.x
 
 Libraries Used:
 
-scikit-learn: For vectorization and classification.
+          scikit-learn: For vectorization and classification.
 
-pandas and numpy: For data handling.
+          pandas and numpy: For data handling.
 
-matplotlib: (Optional) for visualizing accuracy or model insights.
+          matplotlib: (Optional) for visualizing accuracy or model insights.
 
-Machine Learning Algorithm: Multinomial Naive Bayes
+          Machine Learning Algorithm: Multinomial Naive Bayes
 
-Vectorizer: CountVectorizer (Bag-of-Words model)
+          Vectorizer: CountVectorizer (Bag-of-Words model)
 
 📊 Dataset Description
-This chatbot uses a very small hardcoded dataset containing eight common user questions and their corresponding categories. Each entry includes:
+          This chatbot uses a very small hardcoded dataset containing eight common user questions and their corresponding categories. Each entry includes:
 
 Question	Category
-How can I reset my password?	Password Reset
-I want to check my order status	Order Status
-How to return a product?	Product Return
-Where is my package?	Package Tracking
-Do you offer discounts?	Discounts
-How can I contact support?	Contact Support
-Can I change my shipping address?	Shipping Address
-Can I cancel my order?	Order Cancellation
+         How can I reset my password?	Password Reset
+         I want to check my order status	Order Status
+         How to return a product?	Product Return
+         Where is my package?	Package Tracking
+         Do you offer discounts?	Discounts
+         How can I contact support?	Contact Support
+         Can I change my shipping address?	Shipping Address
+         Can I cancel my order?	Order Cancellation
 
 This small dataset is used to simulate intent classification for a customer support chatbot.
 
 🧠 Model Architecture
-The chatbot is powered by a text classification pipeline:
+        The chatbot is powered by a text classification pipeline:
 
-CountVectorizer: Converts input text into a matrix of token counts.
+        CountVectorizer: Converts input text into a matrix of token counts.
 
-Multinomial Naive Bayes: Trained on tokenized data to classify the intent.
+        Multinomial Naive Bayes: Trained on tokenized data to classify the intent.
 
 Pipeline Structure:
 
-graphql
-Copy
-Edit
-Input Query → CountVectorizer → MultinomialNB → Category Output
-The model learns word-frequency patterns associated with each support category and uses probabilistic reasoning to predict the closest category for new queries.
+      graphql:
+
+            Input Query → CountVectorizer → MultinomialNB → Category Output
+            The model learns word-frequency patterns associated with each support category and uses probabilistic reasoning to predict the closest category for new queries.
 
 ⚙️ Working Mechanism
-User types a question into the console.
+            User types a question into the console.
 
-The chatbot processes the input using the vectorizer.
+            The chatbot processes the input using the vectorizer.
 
-The trained Naive Bayes model predicts the most likely category.
+            The trained Naive Bayes model predicts the most likely category.
 
-The chatbot responds with the related support area.
+            The chatbot responds with the related support area.
 
 📜 Code Explanation
-python
-Copy
-Edit
-import numpy as np
-import pandas as pd
-from sklearn.feature_extraction.text import CountVectorizer
-from sklearn.naive_bayes import MultinomialNB
-from sklearn.pipeline import make_pipeline
-from sklearn.model_selection import train_test_split
-import matplotlib.pyplot as plt
-Libraries for data manipulation, machine learning, and visualization.
+       python code:
 
-python
-Copy
-Edit
+          import numpy as np
+          import pandas as pd
+          from sklearn.feature_extraction.text import CountVectorizer
+          from sklearn.naive_bayes import MultinomialNB
+          from sklearn.pipeline import make_pipeline
+          from sklearn.model_selection import train_test_split
+          import matplotlib.pyplot as plt
+          
+Libraries for data manipulation, machine learning, and visualization.
+ 
+pythoncode:
+
 data = {
     'question': [
         "How can I reset my password?",
@@ -105,21 +104,20 @@ data = {
         ...
     ]
 }
+  
 df = pd.DataFrame(data)
 Dataset stored as a dictionary and converted into a DataFrame.
 
-python
-Copy
-Edit
+python code:
+
 X = df['question']
 y = df['category']
 X: Input questions.
 
 y: Target labels (categories).
 
-python
-Copy
-Edit
+python code:
+
 model = make_pipeline(CountVectorizer(), MultinomialNB())
 Creates a processing pipeline for vectorization and classification.
 
@@ -130,17 +128,15 @@ X_train, X_test, y_train, y_test = train_test_split(X, y, test_size=0.2, random_
 model.fit(X_train, y_train)
 Data is split into training and test sets (80/20) and the model is trained.
 
-python
-Copy
-Edit
+python code:
+
 def chatbot_response(query):
     prediction = model.predict([query])
     return prediction[0]
 Predicts category for a user input.
 
-python
-Copy
-Edit
+python code:
+
 while True:
     user_input = input("You: ")
     if user_input.lower() == 'exit':
@@ -150,9 +146,8 @@ while True:
     print(f"Bot: I can help with {response}")
 Runs a loop to simulate an ongoing chatbot interaction.
 
-python
-Copy
-Edit
+python code:
+
 accuracy = model.score(X_test, y_test)
 print(f"Model Accuracy: {accuracy * 100:.2f}%")
 Outputs model performance.
@@ -160,37 +155,26 @@ Outputs model performance.
 💻 Installation Guide
 Clone the Repository (if applicable):
 
-bash
-Copy
-Edit
+
 git clone https://github.com/yourusername/chatbot.git
 cd chatbot
 Install Required Libraries:
 
-bash
-Copy
-Edit
+
 pip install numpy pandas scikit-learn matplotlib
 Run the Script:
 
-bash
-Copy
-Edit
+
 python chatbot.py
 ▶️ How to Run
 Once you execute the script, you will see:
 
-vbnet
-Copy
-Edit
+
 Hello! I'm your customer support chatbot.
 How can I Help You?
 You: 
 Start typing your query, e.g.:
 
-pgsql
-Copy
-Edit
 You: I forgot my password
 Bot: I can help with Password Reset
 Type exit to terminate the chatbot.
@@ -198,18 +182,15 @@ Type exit to terminate the chatbot.
 🧪 Testing and Accuracy
 The model is evaluated using a simple accuracy score:
 
-python
-Copy
-Edit
+python code:
+
 model.score(X_test, y_test)
 With 8 examples, the split gives only 1–2 test samples. Accuracy may vary significantly and isn't statistically significant due to the tiny dataset.
 
 Example Output:
 
-yaml
-Copy
-Edit
 Model Accuracy: 100.00%
+
 📥 Sample Inputs and Outputs
 User Input	Predicted Category
 “Where is my order?”	Package Tracking
