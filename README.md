@@ -1,4 +1,6 @@
-![image](https://github.com/user-attachments/assets/ea7ce14d-6d02-4e89-9d7a-491e5030a80e)![image](https://github.com/user-attachments/assets/8f37fc4a-cb81-40b0-9a52-3c54bfe42229)📖 Project Overview
+                                                             Revolutionizing customer support with an intelligent chatbot for automated assistance .
+
+📖 Project Overview
             This project is a simple customer support chatbot built using Python, leveraging the Multinomial Naive Bayes classification model and the CountVectorizer from scikit-learn. The chatbot takes user queries as input and classifies them into predefined categories such as password reset, order status, or contact support.
 
             The aim is to simulate a lightweight FAQ chatbot that can assist users with their questions in real time using basic natural language processing and supervised machine learning.
